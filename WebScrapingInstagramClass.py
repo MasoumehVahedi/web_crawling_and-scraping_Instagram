@@ -11,6 +11,7 @@ from selenium.webdriver.support import expected_conditions as EC
 
 
 class InstagramScraping:
+
     def __init__(self, username, password):
         self.Username = username
         self.Password = password
@@ -29,8 +30,8 @@ class InstagramScraping:
 
         username.clear()
         password.clear()
-        username.send_keys("...")
-        password.send_keys("...")
+        username.send_keys("...")    # Username
+        password.send_keys("...")    # Password
 
         log_in = WebDriverWait(self.driver, 10).until(EC.element_to_be_clickable((By.CSS_SELECTOR, "button[type='submit']")))
         log_in.click()
